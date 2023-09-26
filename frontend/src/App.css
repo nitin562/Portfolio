@@ -1,0 +1,11 @@
+:root{
+    --Bg1:#053B50;
+    --Bg2:#176B87;
+    --Bg3:#64CCC5;
+    --Bg4:#EEEEEE;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
