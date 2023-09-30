@@ -7,12 +7,12 @@ export default function Nav() {
         if(toogle){
             NavRef.current.style.height="4rem"
             NavRef.current.children[0].style.height="4rem"
-            NavRef.current.children[0].style.backgroundColor="#000"
+            NavRef.current.children[0].style.backgroundColor="#220d6388"
         }
         else{
             NavRef.current.style.height="22rem"
             NavRef.current.children[0].style.height="22rem"
-            NavRef.current.children[0].style.backgroundColor="#00000090"
+            NavRef.current.children[0].style.backgroundColor="#220d6388"
         }
         settoogle((prev)=>{
             return !prev
@@ -29,11 +29,11 @@ export default function Nav() {
                     <button onClick={onToggle}><img className={toogle?"rotate":""} src={require("../../Images/menu.png")} alt="toogle" /></button>
                 </div>
                 <div className="items">
-                    <p>Home</p>
-                    <p>Background</p>
-                    <p>Projects</p>
-                    <p>Skills</p>
-                    <p>About</p>
+                    <p>Home <div className='underline'></div></p>
+                    <p>Background <div className='underline'></div></p>
+                    <p>Projects <div className='underline'></div></p>
+                    <p>Skills <div className='underline'></div></p>
+                    <p>About <div className='underline'></div></p>
                 </div>
             </div>
             <div className="contact">
