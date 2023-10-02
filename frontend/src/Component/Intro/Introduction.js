@@ -9,6 +9,7 @@ export default function Introduction() {
       typeSpeed: 50,
       backSpeed: 50,
       loop:true,
+      showCursor:false
     })
     return()=>{
       type.destroy()

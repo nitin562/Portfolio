@@ -7,12 +7,12 @@ export default function Nav() {
         if(toogle){
             NavRef.current.style.height="4rem"
             NavRef.current.children[0].style.height="4rem"
-            NavRef.current.children[0].style.backgroundColor="#220d6388"
+            NavRef.current.children[0].style.backgroundColor="#06192d"
         }
         else{
             NavRef.current.style.height="22rem"
             NavRef.current.children[0].style.height="22rem"
-            NavRef.current.children[0].style.backgroundColor="#220d6388"
+            NavRef.current.children[0].style.backgroundColor="#06192dbd"
         }
         settoogle((prev)=>{
             return !prev
