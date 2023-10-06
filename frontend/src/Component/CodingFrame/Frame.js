@@ -8,6 +8,7 @@ export default function Frame() {
           strings: ["Frontend Developer","Backend Developer","Full Stack Developer","MERN Developer"],
           typeSpeed: 50,
           loop:true,
+          showCursor:false
           
         });
     
