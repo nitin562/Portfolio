@@ -1,0 +1,10 @@
+.HomeView{
+    width: 100vw;
+    height: 100vh;
+}
+:root{
+    --c1:#071952;
+    --c2:#07557e6f;
+    --c3:#cb5714;
+    --c4:#F2F7A1;
+}
