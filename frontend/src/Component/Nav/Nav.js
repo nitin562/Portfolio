@@ -1,11 +1,12 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./nav.css";
+import MenuItem from "./MenuItem";
 
 export default function Nav() {
   const [Toogle, setToogle] = useState(false);
   const menu = useRef(0);
   const OnClickToogleBtn = () => {
-  
+    console.log("y");
     if (Toogle) {
       // already Toogled
       menu.current.style.right = "-30rem";
@@ -14,6 +15,24 @@ export default function Nav() {
     }
     setToogle((prev) => !prev);
   };
+  useEffect(() => {
+    const HandleSideBar = (e) => {
+      if (
+        e.target.className === "fa-solid fa-bars" ||
+        e.target.className === "toogle"
+      ) {
+        return;
+      }
+      if (Toogle) {
+        OnClickToogleBtn();
+      }
+    };
+    document.addEventListener("click", HandleSideBar);
+    //cleanup
+    return () => {
+      document.removeEventListener("click", HandleSideBar);
+    };
+  }, [Toogle]);
   return (
     <nav>
       <div className="navWrap">
@@ -24,19 +43,24 @@ export default function Nav() {
         <div className="menu" ref={menu}>
           <ul>
             <li>
-              <i className="fa-solid fa-house" title="Home"></i><span>Home</span>
+              <i className="fa-solid fa-house" title="Home"></i>
+              <MenuItem item="Home" />
             </li>
             <li>
-              <i className="fa-solid fa-school" title="Background"></i><span>Background</span>
+              <i className="fa-solid fa-school" title="Background"></i>
+              <MenuItem item="Background" />
             </li>
             <li>
-              <i className="fa-brands fa-dev" title="Projects"></i><span>Projects</span>
+              <i className="fa-brands fa-dev" title="Projects"></i>
+              <MenuItem item="Projects" />
             </li>
             <li>
-              <i className="fa-solid fa-star" title="Achievements"></i><span>Achievements</span>
+              <i className="fa-solid fa-star" title="Achievements"></i>
+              <MenuItem item="Achievements" />
             </li>
             <li>
-              <i className="fa-regular fa-address-card" title="Contact me"></i><span>Contact me</span>
+              <i className="fa-regular fa-address-card" title="Contact me"></i>
+              <MenuItem item="Contact Me" />
             </li>
           </ul>
           <div className="socialMedia">

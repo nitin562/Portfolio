@@ -1,11 +1,14 @@
 import "./App.css";
+import { ContextProvider } from "./Component/Context/ContextProvider";
 import Home from "./Component/Home";
 
 function App() {
   return (
-    <div id="App">
-      <Home />
-    </div>
+    <ContextProvider>
+      <div id="App">
+        <Home />
+      </div>
+    </ContextProvider>
   );
 }
 

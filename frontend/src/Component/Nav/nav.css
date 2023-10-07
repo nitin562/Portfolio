@@ -63,6 +63,8 @@ nav {
   color: var(--GreenColor);
 }
 .menu ul li i {
+  color: #b19f9f;
+
   /* icon  in menu*/
   transition: 0.3s;
   margin-right: 0.5rem;
@@ -70,6 +72,7 @@ nav {
 }
 
 .menu ul li:hover i {
+  color: var(--GreenColor);
   scale: 1.2;
 }
 .socialMedia {
