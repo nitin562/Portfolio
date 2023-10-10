@@ -8,7 +8,7 @@ import Terminal from './Terminal/Terminal'
 export default function Home() {
   const context=useCont()
   return (
-    <div id='Home' className='scrollbar'>
+    <div id='Home' className='scrollbar' >
         <Nav/>
         <div className="IntroLine" ref={context.state.references["Home"]}>
           <Frame/>
