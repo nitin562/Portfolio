@@ -15,8 +15,28 @@ export default function Instruction({
   const [lastcommands, setlastcommands] = useState([])
   const OnInput = (e) => {
     
-    setcommandLine(e.target.textContent);
+    setcommandLine(e.target.innerText);
   };
+  const repositionCaret = () => {
+    const textNode = textInput.current.firstChild;
+  
+    // Create a range and set the start and end offsets to the end of the text node
+    const range = document.createRange();
+    range.setStart(textNode, textNode.length);
+    range.setEnd(textNode, textNode.length);
+  
+    // Collapse the range to the end
+    range.collapse(false);
+  
+    // Set the selection to the created range
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+  
+    // Focus the contentEditable div
+    textInput.current.focus();
+  };
+  
   useEffect(() => {
     if (enable === false) {
       return;
@@ -40,13 +60,14 @@ export default function Instruction({
           });
         }
         setcommandLine("");
-        textInput.current.textContent = "";
+        textInput.current.innerText = "";
       }
       if(e.code==="ArrowUp" && commandCount.current>0 ){
         console.log(lastcommands,commandCount.current)
         const cmd=lastcommands[commandCount.current-1]
         setcommandLine(cmd)
-        textInput.current.innerHTML=cmd
+        textInput.current.innerText=cmd
+        repositionCaret()
         commandCount.current-=1
       }
       
@@ -55,7 +76,7 @@ export default function Instruction({
     return () => {
       document.removeEventListener("keydown", OnEnter);
     };
-  }, [textInput.current.textContent]);
+  }, [textInput.current.innerText]);
   return (
     <div id="Instruct">
       <p>$ nitindb-dev &gt;&gt;</p>
@@ -65,7 +86,6 @@ export default function Instruction({
         onInput={OnInput}
         contentEditable={enable}
         suppressContentEditableWarning={true}
-        autoFocus={true}
       >
         {command ? command : ""}
       </div>
