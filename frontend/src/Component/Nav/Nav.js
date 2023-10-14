@@ -45,8 +45,8 @@ export default function Nav() {
             <MenuItem item="Home" />
           </li>
           <li>
-            <i className="fa-solid fa-school" title="Background"></i>
-            <MenuItem item="Background" />
+            <i className="fa-solid fa-school" title="Education"></i>
+            <MenuItem item="Education" />
           </li>
           <li>
             <i className="fa-brands fa-dev" title="Projects"></i>

@@ -23,7 +23,7 @@ export default function CmdWorker() {
 
           })
         }
-        <Instruction command={current.command} prevCommands={instruction} response={current.response} enable={current.enable} changeCurrent={setcurrent}changeInstruction={setinstruction}/>
+        <Instruction key={-1} command={current.command} prevCommands={instruction} response={current.response} enable={current.enable} changeCurrent={setcurrent}changeInstruction={setinstruction}/>
     </div>
   )
 }

@@ -2,8 +2,8 @@
   margin-top: 1rem;
   overflow-y: scroll;
   width: 95%;
-  height: 20rem;
-
+  flex: 1;
+  ;
 }
 /* instruction.js */
 #Instruct {
@@ -13,7 +13,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: center;
+  
   font-family: "Ubuntu mono";
 
   font-size: 1.2rem;
@@ -22,23 +22,19 @@
   color: #fff;
   width: fit-content;
 }
-.InputDiv {
-  margin-left: 0.2rem;
-  border: 0.1rem solid #fff;
+
+#Command{
+  text-indent: 0.5rem;
+  caret-color: var(--GreenColor);
   color: var(--GreenColor);
-  outline: none;
+  background-color: transparent;
   border: 0;
-  border-right: 0.5rem solid transparent;
-  caret-color: transparent;
+  outline: 0;
+  font-size: 1.2rem;
+  font-family: "Ubuntu mono";
+  border: 0.1rem solid #fff;
+  min-width: 5rem;
   
-}
-.InputDiv div{   
-  /* This is for the div added on enter due to contentEditable */
-    display: inline-block;
-    white-space: nowrap;
-}
-.InputDiv:focus {
-  animation: blink 0.75s ease infinite;
 }
 @keyframes blink {
   0%,
