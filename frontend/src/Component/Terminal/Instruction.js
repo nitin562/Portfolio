@@ -7,46 +7,47 @@ export default function Instruction({
   enable,
   changeCurrent,
   changeInstruction,
-  prevCommands
+  prevCommands,
 }) {
   const [commandLine, setcommandLine] = useState("");
   const textInput = useRef(0);
-  const commandCount=useRef(-1)
-  const [lastcommands, setlastcommands] = useState([])
+  const commandCount = useRef(-1);
+  const [lastcommands, setlastcommands] = useState([]);
   const OnInput = (e) => {
-    
     setcommandLine(e.target.innerText);
   };
   const repositionCaret = () => {
     const textNode = textInput.current.firstChild;
-  
+
     // Create a range and set the start and end offsets to the end of the text node
     const range = document.createRange();
     range.setStart(textNode, textNode.length);
     range.setEnd(textNode, textNode.length);
-  
+
     // Collapse the range to the end
     range.collapse(false);
-  
+
     // Set the selection to the created range
     const selection = window.getSelection();
     selection.removeAllRanges();
     selection.addRange(range);
-  
+
     // Focus the contentEditable div
     textInput.current.focus();
   };
-  
+
   useEffect(() => {
     if (enable === false) {
       return;
     }
     const OnEnter = async (e) => {
-      console.log(e.code)
       if (e.code === "Enter" || e.code === "NumpadEnter" || e.code === "") {
         e.preventDefault();
-        commandCount.current=lastcommands.length+1;
-        setlastcommands((prev)=>{return [...prev,commandLine]})
+
+        commandCount.current = lastcommands.length + 1;
+        setlastcommands((prev) => {
+          return [...prev, commandLine];
+        });
         if (commandLine === "clear") {
           changeInstruction([]);
         } else {
@@ -62,19 +63,27 @@ export default function Instruction({
         setcommandLine("");
         textInput.current.innerText = "";
       }
-      if(e.code==="ArrowUp" && commandCount.current>0 ){
-        console.log(lastcommands,commandCount.current)
-        const cmd=lastcommands[commandCount.current-1]
-        setcommandLine(cmd)
-        textInput.current.innerText=cmd
-        repositionCaret()
-        commandCount.current-=1
+      if (e.code === "ArrowUp" && commandCount.current > 0) {
+        const cmd = lastcommands[commandCount.current - 1];
+        setcommandLine(cmd);
+        textInput.current.innerText = cmd;
+        commandCount.current -= 1;
+        setTimeout(() => {
+          repositionCaret();
+        }, 0);
       }
-      
     };
-    document.addEventListener("keydown", OnEnter);
+    // Check if it's a mobile device
+    const isMobile =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      );
+
+    // Use keypress for mobile and keydown for desktop
+    const eventType = isMobile ? "keypress" : "keydown";
+    document.addEventListener(eventType, OnEnter);
     return () => {
-      document.removeEventListener("keydown", OnEnter);
+      document.removeEventListener(eventType, OnEnter);
     };
   }, [textInput.current.innerText]);
   return (
