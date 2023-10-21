@@ -8,7 +8,7 @@ const ContextProvider = (props) => {
   const parameters = {
     references: {
       Home: useRef(0),
-      Background: useRef(0),
+      Education: useRef(0),
       Projects: useRef(0),
       Achievements: useRef(0),
       "Contact Me": useRef(0)

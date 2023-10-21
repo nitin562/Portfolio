@@ -5,6 +5,7 @@ import Frame from './CodingFrame/Frame'
 import Intro from './IntroPart/Intro'
 import { useCont } from './Context/ContextProvider'
 import Terminal from './Terminal/Terminal'
+import Edu from './Education/Edu'
 export default function Home() {
   const context=useCont()
   return (
@@ -15,6 +16,7 @@ export default function Home() {
           <Intro/>
         </div>
         <Terminal/>
+        <Edu/>
     </div>
   )
 }

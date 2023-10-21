@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./cmdworker.css";
-import Response from "./Response";
+import Response from "../Response";
 export default function Instruction({
   command,
   response,
