@@ -5,29 +5,7 @@
   flex-direction: column;
   justify-content: center;
 }
-.title {
-  background-color: var(--RedColor);
-  height: 3rem;
-  font-size: 1.8rem;
-  display: flex;
-  align-items: center;
- 
-  color: aqua;
-  margin-bottom: 1rem;
-}
 
-
-
-.title span {
-  font-family: QuickSand;
-  text-indent: 1rem;
-  letter-spacing: 0.1rem;
-
-}
-
-.title span::first-letter {
-  color: var(--GreenColor);
-}
 .eduFlex {
   width: 100%;
   height: inherit;

@@ -11,6 +11,6 @@ export default function MenuItem({item}) {
     ref.current.scrollIntoView({behavior:"smooth"})
   }
   return (
-    <span onClick={onClick}>{item}</span>
+    <span id={item} onClick={onClick}>{item}</span>
   )
 }

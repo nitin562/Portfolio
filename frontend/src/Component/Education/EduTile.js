@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import "./eTile.css";
 import { Details } from "../Response";
 export default function EduTile({ title, restToogle, changeRestToogle }) {
@@ -14,7 +14,7 @@ export default function EduTile({ title, restToogle, changeRestToogle }) {
     }
     
     settoogle((prev) => !prev);
-    scrollRef.current.scrollIntoView({ behaviour: "smooth" });
+    // scrollRef.current.scrollIntoView({ behaviour: "smooth" });
   };
   const ClickRest=(e)=>{
     if(e.target.closest("#EduTile") ===null){
@@ -23,6 +23,7 @@ export default function EduTile({ title, restToogle, changeRestToogle }) {
       }
     }
   }
+
   useEffect(()=>{
     document.addEventListener("click",ClickRest)
     return()=>{
