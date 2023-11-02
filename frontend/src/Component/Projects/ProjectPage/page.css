@@ -38,13 +38,10 @@
 
 
 
-
-
 /* PImg */
 #Pimg{
     margin-top: 1rem;
     width: 20rem;
-    height: 20rem;
     /* border: 0.1rem solid #fff; */
     display: flex;
     flex-direction: column;
@@ -56,12 +53,9 @@
 }
 
 #Pimg img{
-    flex: 1;
+    height: 20rem;
     width: 100%;
     
-}
-#Pimg:hover{
-    height: 23rem;
 }
 .links{
     width: 100%;
@@ -81,6 +75,26 @@
 .links i:hover{
     color: var(--GreenColor);
     scale: 1.4;
+}
+.skills{
+    min-height: 2.5rem;
+    display: flex;
+    flex-wrap: wrap; 
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #2c84a97d;
+    /* justify-content: flex-start; */
+}
+.skill{
+    font-weight: bold;
+    margin: 0.5rem;
+    color: #41fff6;
+    font-family: Ubuntu;
+    letter-spacing: 0.1rem;
+    /* border: 0.1rem solid #fff; */
+    padding: 0.3rem;
+    border-radius: 2rem;
+    background-color: #766a38;
 }
 
 @media screen and (min-width:768px) {

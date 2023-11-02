@@ -1,6 +1,6 @@
 import React from "react";
 import "./page.css";
-export default function PImg({ url, code, video, deploy }) {
+export default function PImg({ url, code, video, deploy,skills }) {
   const ClickingLink=(e)=>{
     if(e.target.id==="code"){
       window.open(code,"_blank")
@@ -22,6 +22,11 @@ export default function PImg({ url, code, video, deploy }) {
         {code && <i onClick={ClickingLink} id="code" className="fa-solid fa-code"></i>}
         {video && <i onClick={ClickingLink} id="video" className="fa-brands fa-youtube"></i>}
         {deploy && <i onClick={ClickingLink} id="deploy" className="fa-solid fa-link"></i>}
+      </div>
+      <div className="skills">
+        {skills.map((e)=>{
+          return <p key={e} className="skill">{e}</p>
+        })}
       </div>
     </div>
   );

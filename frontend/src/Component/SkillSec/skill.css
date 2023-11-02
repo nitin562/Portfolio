@@ -1,0 +1,29 @@
+#SkillSec{
+    width: 100%;
+    margin: 1rem 0;
+}
+.skillCont{
+   
+    width: 100%;
+    display: flex;
+    background-color: #082750c0;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    padding: 1rem;
+}
+
+.skillCont p{
+    border: 0.1rem solid var(--RedColor);
+    font-family: "Anton";
+    letter-spacing: 0.2rem;
+    font-size: 1.3rem;
+    color: transparent;
+    -webkit-text-stroke: 1px #03edd9;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    background-color: #756a0733;
+    /* margin: 1rem; */
+    cursor: default;
+}

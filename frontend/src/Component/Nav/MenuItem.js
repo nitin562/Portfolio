@@ -1,7 +1,7 @@
 import React from 'react'
 import {useCont } from '../Context/ContextProvider'
 
-export default function MenuItem({item}) {
+export default function MenuItem({item,iName,title}) {
   const context=useCont()
   const onClick=()=>{
     const ref=context.state.references[item]
@@ -11,6 +11,9 @@ export default function MenuItem({item}) {
     ref.current.scrollIntoView({behavior:"smooth"})
   }
   return (
+    <div onClick={onClick}>
+    <i className={iName} title={title}></i>
     <span id={item} onClick={onClick}>{item}</span>
+    </div>
   )
 }
