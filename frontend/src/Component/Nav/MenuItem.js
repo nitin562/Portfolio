@@ -3,19 +3,21 @@ import {useCont } from '../Context/ContextProvider'
 
 export default function MenuItem({item,iName,title}) {
   const context=useCont()
-  const onClick=()=>{
+  const onClick=(e)=>{
     alert("click")
+    
     const ref=context.state.references[item]
     if(ref &&ref.current===0){
       alert("No")
       return; //no linkage to a DOM element
     }
+    alert(ref.current)
     ref.current.scrollIntoView({behavior:"smooth"})
   }
   return (
     <div onClick={onClick}>
     <i className={iName} title={title}></i>
-    <span id={item} onClick={onClick}>{item}</span>
+    <span id={item}>{item}</span>
     </div>
   )
 }
