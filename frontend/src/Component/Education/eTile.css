@@ -1,0 +1,63 @@
+#EduTile {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+#EduTile i {
+  margin-right: 0.5rem;
+}
+
+#e_title {
+  letter-spacing: 0.1rem;
+  text-indent: 1rem;
+  color: #fff171;
+  font-size: 1.5rem;
+  font-family: Ubuntu;
+  cursor: pointer;
+  transition: 0.2s ease;
+  /* border-bottom: 0.1rem solid var(--GreenColor); */
+}
+#e_title:hover {
+  text-shadow: 0 0 1rem #fff;
+  color: #959eff;
+}
+
+.lineBreak {
+  display: block;
+  width: 0;
+  margin-left: 1rem;
+  margin-top: 0.2rem;
+  height: 0.1rem;
+  background-color: rgb(114, 117, 117);
+  border-radius: 2rem;
+  transition: 0.4s ease;
+}
+.increaseHeight{
+  box-shadow: 0 0 1rem #fff;
+  width: 90%;
+  
+}
+.edit {
+  /* border: 0.1rem solid #fff; */
+  padding: 0 2rem;
+  transform-origin: top;
+  transition: 0.2s ease;
+  font-size: 2rem;
+  cursor: default;
+}
+.edit span{
+    color: #0d8eff;
+    font-size: 1.5rem;
+}
+.edit p{
+    color: #dfa5ff;
+    font-size: larger;
+}
+.collapse {
+  overflow: hidden;
+  max-height: 0;
+}
+.expand {
+  max-height: 25rem;
+  overflow: visible;
+}

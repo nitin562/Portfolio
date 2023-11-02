@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./cmdworker.css";
-import Response from "./Response";
+import Response from "../Response";
 export default function Instruction({
   command,
   response,
@@ -10,112 +10,94 @@ export default function Instruction({
   prevCommands,
 }) {
   const [commandLine, setcommandLine] = useState("");
-  const commandElement = useRef(0);
+  const textInput = useRef(0);
   const commandCount = useRef(-1);
   const [lastcommands, setlastcommands] = useState([]);
-  const HandleCommandState = (e) => {
-    console.log(e.target.value, commandLine);
-    setcommandLine(e.target.value);
+  const OnInput = (e) => {
+    setcommandLine(e.target.innerText);
   };
-  const OnEnter = async (e) => {
-    commandCount.current = lastcommands.length + 1;
-    setlastcommands((prev) => {
-      return [...prev, commandLine];
-    });
+  const repositionCaret = () => {
+    const textNode = textInput.current.firstChild;
 
-    if (commandLine === "clear") {
-      changeInstruction([]);
-    } else {
-      console.log("command", commandLine);
-      let data = {
-        command: commandLine,
-        response: await Response(commandLine),
-        enable: false,
-      };
-      changeInstruction((prev) => {
-        return [...prev, data];
-      });
-    }
-    setcommandLine("");
-  };
-  const RepositionCaret = () => {
-    let element = commandElement.current;
+    // Create a range and set the start and end offsets to the end of the text node
+    const range = document.createRange();
+    range.setStart(textNode, textNode.length);
+    range.setEnd(textNode, textNode.length);
 
-    console.log(element, element.value.length, element.value);
-    element.selectionStart = element.selectionEnd = element.value.length;
-    element.focus();
+    // Collapse the range to the end
+    range.collapse(false);
+
+    // Set the selection to the created range
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+
+    // Focus the contentEditable div
+    textInput.current.focus();
   };
-  const ArrowUp = (e) => {
+
+  useEffect(() => {
     if (enable === false) {
       return;
     }
-    if (e.code === "ArrowUp" && commandCount.current > 0) {
-      commandElement.current.blur();
-      const commandIndex = commandCount.current - 1;
-      const cmd = lastcommands[commandIndex];
-      commandElement.current.value = cmd;
-      setcommandLine(cmd);
-      commandCount.current--;
-    } else if (
-      e.code === "ArrowDown" &&
-      commandCount.current < lastcommands.length
-    ) {
-      const commandIndex = commandCount.current + 1;
-      commandCount.current++;
-      if (commandIndex === lastcommands.length) {
-        commandElement.current.value = "";
+    const OnEnter = async (e) => {
+      if (e.code === "Enter" || e.code === "NumpadEnter" || e.code === "") {
+        e.preventDefault();
+
+        commandCount.current = lastcommands.length + 1;
+        setlastcommands((prev) => {
+          return [...prev, commandLine];
+        });
+        if (commandLine === "clear") {
+          changeInstruction([]);
+        } else {
+          let data = {
+            command: commandLine,
+            response: await Response(commandLine),
+            enable: false,
+          };
+          changeInstruction((prev) => {
+            return [...prev, data];
+          });
+        }
         setcommandLine("");
-        return;
+        textInput.current.innerText = "";
       }
-      const cmd = lastcommands[commandIndex];
-      commandElement.current.value = cmd;
-      setcommandLine(cmd);
-    } else {
-      return;
-    }
-    // RepositionCaret();
-    setTimeout(() => { //it makes the function call after the current event cycle finished. So all renders and updates will  happen and then RepositionCaret will invoke
-      RepositionCaret();
-    }, 0);
-  };
-  useEffect(() => {
-    document.addEventListener("keydown", ArrowUp);
-    return () => {
-      document.removeEventListener("keydown", ArrowUp);
+      if (e.code === "ArrowUp" && commandCount.current > 0) {
+        const cmd = lastcommands[commandCount.current - 1];
+        setcommandLine(cmd);
+        textInput.current.innerText = cmd;
+        commandCount.current -= 1;
+        setTimeout(() => {
+          repositionCaret();
+        }, 0);
+      }
     };
-  }, [lastcommands]);
-  const FocusingToInput = (e) => {
-    if (e.target.closest(".cmd") !== null) {
-      console.log(commandElement.current);
-      commandElement.current.focus();
-    }
-  };
-  useEffect(() => {
-    document.addEventListener("click", FocusingToInput);
+    // Check if it's a mobile device
+    const isMobile =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      );
+
+    // Use keypress for mobile and keydown for desktop
+    const eventType = isMobile ? "keypress" : "keydown";
+    document.addEventListener(eventType, OnEnter);
     return () => {
-      document.removeEventListener("click", FocusingToInput);
+      document.removeEventListener(eventType, OnEnter);
     };
-  }, []);
+  }, [textInput.current.innerText]);
   return (
     <div id="Instruct">
       <p>$ nitindb-dev &gt;&gt;</p>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          OnEnter(e);
-        }}
+      <div
+        className="InputDiv"
+        ref={textInput}
+        onInput={OnInput}
+        contentEditable={enable}
+        suppressContentEditableWarning={true}
       >
-        <input
-          ref={commandElement}
-          id="Command"
-          type="text"
-          value={command ? command : commandLine}
-          disabled={!enable}
-          onChange={HandleCommandState}
-          autoComplete="off"
-          autoCorrect="off"
-        />
-      </form>
+        {command ? command : ""}
+      </div>
       {response && <div className="Response">{response}</div>}
     </div>
   );

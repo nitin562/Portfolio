@@ -1,0 +1,82 @@
+#Contact{
+    width: 100%;
+    min-height: 20rem;
+    background: url("https://www.wallpaperflare.com/static/358/183/789/autohotkey-programmers-code-programming-wallpaper.jpg") no-repeat center center/cover;
+  
+    border-top: 0.1rem solid var(--RedColor);
+}
+#Contact>p{
+    margin: 1rem 0;
+    color: #ff2478;
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    font-family: QuickSand;
+    
+}
+.contacts{
+    display: flex;
+    flex-direction: column-reverse;
+    
+}
+
+
+.left,.right{
+    height: 25rem;
+    width: 100%;
+}
+.ContHead{
+    letter-spacing: 0.1rem;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    margin: 1rem 0;
+    font-size: 2rem;
+    font-family: QuickSand;
+}
+.ContHead div{
+    width: 25%;
+    background-color: #12a4ff;
+    height: 0.1rem;
+    margin: 0.2rem auto;
+    border-radius: 2rem;
+}
+.infoCont{
+    display: flex;
+    flex-direction: column;
+    margin: 5rem 0;
+}
+.infoCont p{
+    color: #fff;
+    text-align: center;
+    margin: 1rem;
+    font-size: 1.5rem;
+    font-family:"Titillium web";
+    letter-spacing: 0.1rem;
+    color: rgb(63, 255, 137);
+    background-color: #110b48;
+    border-radius: 2rem;
+    text-wrap: wrap;
+}
+.left p span{
+    color: #8dffd3;
+}
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.right img{
+    border-radius: 100%;
+    width: 45%;
+  
+}
+@media screen and (min-width:800px) {
+    .contacts{
+        flex-direction: row;
+    }
+    .left,.right{
+        width: 100%;
+    }
+}

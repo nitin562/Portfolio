@@ -1,0 +1,72 @@
+#Achieve{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.A_list{
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.A_list div{
+    margin-bottom: 1rem;
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    border: 0.1rem solid #fff;
+    cursor: pointer;
+    
+}
+.A_list p{
+    color: rgb(54, 14, 255);
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    font-family: Ubuntu;
+    font-size: 2rem;
+    background-color: #ffffff;
+    width: 100%;
+    text-align: center;
+    text-wrap: wrap;
+    animation: expand 1s ease-out infinite;
+    
+}
+@keyframes expand {
+    0%,100%{
+        text-shadow: 2px 2px 3px rgba(255, 0, 0, 0.756), -2px 2px 1px rgba(34, 255, 0, 0.648);
+    }
+    60%{
+        text-shadow: 2px 2px 1px rgb(34, 255, 0);
+
+    }
+}
+
+/* specific container */
+.Coding{
+    background: url("./codeSec.jpg") no-repeat center center/cover;
+}
+.Certification{
+    background: url("./certificate.png") no-repeat center center/cover;
+}
+.participation{
+    background: url("./participate.jpg") no-repeat center center/cover;
+ 
+}
+
+@media screen and (min-width:803px) {
+    .A_list{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+}
+@media screen and (min-width:940px) {
+    .A_list div{
+        width: 18rem;
+    }
+}

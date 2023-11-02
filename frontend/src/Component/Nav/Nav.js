@@ -14,6 +14,9 @@ export default function Nav() {
     }
     setToogle((prev) => !prev);
   };
+  const open=(link)=>{
+    window.open(link,"_blank")
+  }
   useEffect(() => {
     const HandleSideBar = (e) => {
       if (
@@ -41,30 +44,33 @@ export default function Nav() {
       <div className="menu" ref={menu}>
         <ul>
           <li>
-            <i className="fa-solid fa-house" title="Home"></i>
-            <MenuItem item="Home" />
+            
+            <MenuItem item="Home" iName="fa-solid fa-house" title="Home"  />
           </li>
           <li>
-            <i className="fa-solid fa-school" title="Education"></i>
-            <MenuItem item="Education" />
+            
+            <MenuItem item="Education" iName="fa-solid fa-school" title="Background"/>
           </li>
           <li>
-            <i className="fa-brands fa-dev" title="Projects"></i>
-            <MenuItem item="Projects" />
+            <MenuItem item="Projects" iName="fa-brands fa-dev" title="Projects"/>
           </li>
           <li>
-            <i className="fa-solid fa-star" title="Achievements"></i>
-            <MenuItem item="Achievements" />
+            <MenuItem item="Achievements" iName="fa-solid fa-star" title="Achievements" />
           </li>
           <li>
-            <i className="fa-regular fa-address-card" title="Contact me"></i>
-            <MenuItem item="Contact Me" />
+            <MenuItem item="Contact Me" iName="fa-regular fa-address-card" title="Contact me"/>
           </li>
         </ul>
         <div className="socialMedia">
-          <i className="fa-brands fa-linkedin-in"></i>
-          <i className="fa-brands fa-github"></i>
-          <i className="fa-solid fa-envelope"></i>
+          <i className="fa-brands fa-linkedin-in" onClick={()=>{
+            open("https://linkedin.com/in/nitin-dabas-195058224")
+          }}></i>
+          <i className="fa-brands fa-github" onClick={()=>{
+            open("https://github.com/nitin562/")
+          }}></i>
+          <i className="fa-solid fa-c" onClick={()=>{
+            open("https://leetcode.com/nitindbas8800/")
+          }}></i>
         </div>
       </div>
 

@@ -12,6 +12,7 @@ export default function Intro() {
                 Hey there! My name is Nitin Dabas. I'm a full-stack web developer and software engineer who thinks getting better at what you do is the only correct way to succeed. I'm fresh to the tech world right now, but I'm always eager to try new things and learn new things.
             </p>
         </div>
+        
     </div>
   )
 }
