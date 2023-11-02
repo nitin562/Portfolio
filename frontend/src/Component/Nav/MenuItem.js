@@ -11,7 +11,7 @@ export default function MenuItem({item,iName,title}) {
       alert("No")
       return; //no linkage to a DOM element
     }
-    alert(ref.current)
+    alert(ref.current.id)
     ref.current.scrollIntoView({behavior:"smooth"})
   }
   return (
