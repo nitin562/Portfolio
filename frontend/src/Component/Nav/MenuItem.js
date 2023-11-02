@@ -4,6 +4,7 @@ import {useCont } from '../Context/ContextProvider'
 export default function MenuItem({item,iName,title}) {
   const context=useCont()
   const onClick=()=>{
+    alert("click")
     const ref=context.state.references[item]
     if(ref &&ref.current===0){
       alert("No")
