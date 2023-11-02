@@ -6,6 +6,7 @@ export default function MenuItem({item,iName,title}) {
   const onClick=()=>{
     const ref=context.state.references[item]
     if(ref &&ref.current===0){
+      alert("No")
       return; //no linkage to a DOM element
     }
     ref.current.scrollIntoView({behavior:"smooth"})
