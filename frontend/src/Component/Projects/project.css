@@ -16,3 +16,9 @@
     column-gap: 4rem;
     flex-wrap: wrap;
 }
+@media screen and (min-width:581px) {
+    .projectMenu{
+        justify-content: flex-start;
+        column-gap: 3rem;
+    }
+}
