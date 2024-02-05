@@ -15,9 +15,7 @@ export default function Contact() {
             <p>
               Email me at <span>nitindbas8800@gmail.com</span>
             </p>
-            <p>
-              Whatsapp me on <span>9971566057</span>
-            </p>
+            
           </div>
         </div>
         <div className="right">

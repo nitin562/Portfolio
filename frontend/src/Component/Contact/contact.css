@@ -57,6 +57,7 @@
     background-color: #110b48;
     border-radius: 2rem;
     text-wrap: wrap;
+    padding: 0.5rem;
 }
 .left p span{
     color: #8dffd3;
