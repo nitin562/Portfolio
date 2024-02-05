@@ -101,7 +101,7 @@ const ContextProvider = (props) => {
         {
           title:
             "Participated to Hackathon Hack@BVP 5.0 and came under top 30 teams among 100+ teams",
-          img: "https://media.licdn.com/dms/image/D4D22AQGlU9_XiwJxYA/feedshare-shrink_1280/0/1686987989440?e=1701907200&v=beta&t=9_tA6IvlUmjQm5oSo7O0hIkTpOltWh7iTCPIMJzLS58",
+          img: "https://d8it4huxumps7.cloudfront.net/uploads/images/opportunity/banner/641eb7c2f0f18_hackit-at-bvp-20.png?d=1920x557",
           msg: "Hello to Viewers, I am glad to share this news that I had participated in HACK@BVP 5.0. Our team had come in the top 30 teams of hackathon. It was organized by Bharti Vidhyapeet, Delhi and sponsored by Coding Ninja. The hackathon was amazing as we learnt so many things about team work and technologies.",
           topic:
             "Our team had created google map prototype using external APIs and frontend Technology i.e ReactJS. There were some problems occur during developing it like searching places and creating a trip route. These problems had solved with help of great mentorship in hackathon. ",
