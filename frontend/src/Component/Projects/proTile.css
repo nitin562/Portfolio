@@ -12,7 +12,7 @@
 #ProTile:hover .skills{
     height: 10%;
 }
-.skills{
+#ProTile .skills{
     height: 0%;
     width: 100%;
     background-color: #0089cd3d;
