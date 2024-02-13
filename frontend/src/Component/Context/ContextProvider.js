@@ -44,7 +44,7 @@ const ContextProvider = (props) => {
         ],
         code: "https://github.com/nitin562/Digital-doc",
         video: null,
-        deploy: "https://digital-doc.vercel.app/",
+        deploy: "https://digitaldoc.vercel.app",
       },
       SnakeGame: {
         url: require("../Projects/ProjctImg/SnakeImg.jpg"),
