@@ -32,6 +32,20 @@ const ContextProvider = (props) => {
       "SOCKET IO",
     ],
     projectData: {
+      DigitalDoc:{
+        url: require("../Projects/ProjctImg/DigitalDoc.png"),
+        skills: ["React JS", "Express JS", "Node JS", "Tailwind CSS","MongoDB","Socket.io"],
+        Notes: [
+          "Jan 2024- Feb 2024",
+          "A full stack development based project that has similiar functionality of Google Docs like real time screen sharing, Rich text editor and Saving functionality.",
+          "Functions are Real Time screen sharing, Multiple User connectivity to a single document, Save Docs to MongoDB, Implementation of Token Authentication, Storing Collaborators that collabs into a single document, Viewing Docs, Rich Text Editor-Quill Text Editor, Socket.io connectivity to connect.",
+          "The summary of working of connecting and real Time Sharing- When user connects to the URL where no other is connected then that user is said to be admin. When an admin is present for given url and other user try to connect that url then the admin will be inform about request and admin has power to discard the request or accept it. When admin accepted the request, both will be share the content of doc and information about each other that helps in saving the Shared Document.",
+          "If somehow admin gets disconnected, the second user from connected user will become new admin and take all powers of admin like Saving power, Changing Title power, request accepting or discarding powers. "
+        ],
+        code: "https://github.com/nitin562/Digital-doc",
+        video: null,
+        deploy: "https://digital-doc.vercel.app/",
+      },
       SnakeGame: {
         url: require("../Projects/ProjctImg/SnakeImg.jpg"),
         skills: ["HTML", "JS", "CSS", "LocalStorge", "RequestAnimationFrame"],
