@@ -45,7 +45,7 @@
     /* border: 0.1rem solid #fff; */
     display: flex;
     flex-direction: column;
-    border-radius: 2rem;
+  
     overflow: hidden;
     box-shadow: 0 0 1rem #524c32;
     transition: 0.3s ease;
@@ -80,22 +80,26 @@
     min-height: 2.5rem;
     display: flex;
     flex-wrap: wrap; 
+    /* column-gap: 1rem; */
+    justify-content: flex-start;
     cursor: pointer;
     transition: 0.3s;
     background-color: #2c84a97d;
-    padding: 1rem;
     /* justify-content: flex-start; */
 }
 .skill{
     font-weight: bold;
+    border-right: 0.5px solid #fff;
+    border-bottom: 0.5px solid #fff;
+
     margin: 0.5rem;
-    color: #41fff6;
+    color: #41ff90;
     font-family: Ubuntu;
     letter-spacing: 0.1rem;
     /* border: 0.1rem solid #fff; */
     padding: 0.3rem;
-    border-radius: 2rem;
-    background-color: #766a38;
+    /* border-radius: 2rem; */
+    /* background-color: #766a38; */
 }
 
 @media screen and (min-width:891px) {

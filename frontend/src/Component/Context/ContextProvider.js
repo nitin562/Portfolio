@@ -33,7 +33,7 @@ const ContextProvider = (props) => {
     ],
     projectData: {
       DigitalDoc:{
-        url: require("../Projects/ProjctImg/DigitalDoc.png"),
+        url: require("../Projects/ProjctImg/DigitalDoc.PNG"),
         skills: ["React JS", "Express JS", "Node JS", "Tailwind CSS","MongoDB","Socket.io"],
         Notes: [
           "Jan 2024- Feb 2024",
