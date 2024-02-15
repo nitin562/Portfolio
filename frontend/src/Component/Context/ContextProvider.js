@@ -18,6 +18,7 @@ const ContextProvider = (props) => {
     Skills: [
       "HTML",
       "CSS",
+      "TAILWIND CSS",
       "JAVASCRIPT",
       "REACT JS",
       "NODE JS",
