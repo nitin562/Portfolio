@@ -12,7 +12,9 @@ export default function MenuItem({item,iName,title}) {
       return; //no linkage to a DOM element
     }
     
-    ref.current.scrollIntoView({behavior:"smooth"})
+    ref.current.scrollIntoView({  behavior: "smooth",
+      block: "start", // Aligns the element to the top of the viewport
+      inline: "nearest"})
   }
   return (
     <div onClick={onClick}>

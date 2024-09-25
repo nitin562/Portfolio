@@ -1,33 +1,45 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./page.css";
-export default function PImg({ url, code, video, deploy,skills }) {
-  const ClickingLink=(e)=>{
-    if(e.target.id==="code"){
-      window.open(code,"_blank")
+
+export default function PImg({ url, code, video, deploy, name }) {
+
+
+  const ClickingLink = (e) => {
+    if (e.target.id === "code") {
+      window.open(code, "_blank");
+    } else if (e.target.id === "video") {
+      window.open(video, "_blank");
+    } else if (e.target.id === "deploy") {
+      window.open(deploy, "_blank");
+    } else {
+      return;
     }
-    else if(e.target.id==="video"){
-      window.open(video,"_blank")
-    }
-    else if(e.target.id==="deploy"){
-      window.open(deploy,"_blank")
-    }
-    else{
-      return
-    }
-  }
+  };
+ 
   return (
     <div id="Pimg">
-      <img src={url} alt="Project image" />
+      <img src={url} style={{ backgroundColor: "#fff" }} alt="Project image" />
       <div className="links">
-        {code && <i onClick={ClickingLink} id="code" className="fa-solid fa-code"></i>}
-        {video && <i onClick={ClickingLink} id="video" className="fa-brands fa-youtube"></i>}
-        {deploy && <i onClick={ClickingLink} id="deploy" className="fa-solid fa-link"></i>}
+        {code && (
+          <i onClick={ClickingLink} id="code" className="fa-solid fa-code"></i>
+        )}
+        {video && (
+          <i
+            onClick={ClickingLink}
+            id="video"
+            className="fa-brands fa-youtube"
+          ></i>
+        )}
+        {deploy && (
+          <i
+            onClick={ClickingLink}
+            id="deploy"
+            className="fa-solid fa-link"
+          ></i>
+        )}
       </div>
-      <div className="skills">
-        {skills.map((e)=>{
-          return <p key={e} className="skill">{e}</p>
-        })}
-      </div>
+
+      
     </div>
   );
 }

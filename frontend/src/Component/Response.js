@@ -1,3 +1,4 @@
+
 const getLocation = () => {
   return new Promise((resolve, reject) => {
     navigator.geolocation.getCurrentPosition(
@@ -10,6 +11,7 @@ const getLocation = () => {
     );
   });
 };
+
 const Response = async (command) => {
   let html;
   if (command === "help") {
@@ -29,11 +31,18 @@ const Response = async (command) => {
           <span>get-location:</span>Get your current location
         </p>
         <p>
+          <span>t-skills:</span>Get to know my Technical Skills
+        </p>
+        <p>
+          <span>s-skills:</span>Get to know my Function Specific Skills
+        </p>
+        <p>
           <span>clear:</span>Clear out the terminal
         </p>
       </div>
     );
-  } else if (command === "lk-p") {
+  } 
+   else if (command === "lk-p") {
     setTimeout(() => {
       window.open("https://linkedin.com/in/nitin-dabas-195058224", "_blank");
     }, 500);

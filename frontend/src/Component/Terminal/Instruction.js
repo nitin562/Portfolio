@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./cmdworker.css";
 import Response from "../Response";
+import { useCont } from "../Context/ContextProvider";
 export default function Instruction({
   command,
   response,
@@ -9,6 +10,8 @@ export default function Instruction({
   changeInstruction,
   prevCommands,
 }) {
+const cont=useCont()
+
   const [commandLine, setcommandLine] = useState("");
   const textInput = useRef(0);
   const commandCount = useRef(-1);
@@ -48,8 +51,42 @@ export default function Instruction({
         setlastcommands((prev) => {
           return [...prev, commandLine];
         });
+    
         if (commandLine === "clear") {
           changeInstruction([]);
+        }else if(commandLine==="t-skills"){
+          let html=(<div className="Response">
+              {cont.state.Skills.personal.map((e,idx)=>{
+                return <p key={idx}>
+                  <span>{e.icon} {e.name} - </span>{e.level}%
+                </p>
+              })}
+            </div>)
+            let data = {
+              command: commandLine,
+              response: html,
+              enable: false,
+            };
+            changeInstruction((prev) => {
+              return [...prev, data];
+            });
+        }
+        else if(commandLine==="s-skills"){
+          let html=(<div className="Response">
+              {cont.state.Skills.specific.map((e,idx)=>{
+                return <p key={idx}>
+                  <span>{e.icon} {e.name} - </span>{e.level}% - {e.desc}
+                </p>
+              })}
+            </div>)
+            let data = {
+              command: commandLine,
+              response: html,
+              enable: false,
+            };
+            changeInstruction((prev) => {
+              return [...prev, data];
+            });
         } else {
           let data = {
             command: commandLine,

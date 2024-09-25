@@ -1,10 +1,13 @@
 import React from 'react'
 import "./intro.css"
+
 export default function Intro() {
   return (
     <div id="Intro">
         <div className="head">
-            <span>--Hello!</span>
+            <span className='flex items-center gap-4'>--Hello!
+              <img src="/wave.gif" className='rounded-full w-10 h-10'/>
+            </span>
             <p>I'm Nitin Dabas</p>
         </div>
         <div className="Introduce">

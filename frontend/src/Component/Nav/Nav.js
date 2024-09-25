@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./nav.css";
 import MenuItem from "./MenuItem";
 
-export default function Nav() {
+export default function Nav({showNavbar=false}) {
   const [Toogle, setToogle] = useState(false);
   const menu = useRef(0);
   const OnClickToogleBtn = () => {
@@ -17,6 +17,8 @@ export default function Nav() {
   const open=(link)=>{
     window.open(link,"_blank")
   }
+
+
   useEffect(() => {
     const HandleSideBar = (e) => {
       if (
@@ -34,9 +36,16 @@ export default function Nav() {
     return () => {
       document.removeEventListener("click", HandleSideBar);
     };
-  }, [Toogle]);
+  }, [Toogle]); 
+  useEffect(()=>{
+    if(showNavbar==false){
+      OnClickToogleBtn()
+    }
+  },[showNavbar])
   return (
-    <div className="navWrap">
+    <div className="navWrap transition-all duration-200 bg-[#0e1630] z-20" style={{
+      top:showNavbar?"0":"-20rem"
+    }}>
       <p className="name">
         <span>N</span>itin <span>D</span>abas
       </p>
@@ -52,6 +61,10 @@ export default function Nav() {
             <MenuItem item="Education" iName="fa-solid fa-school" title="Background"/>
           </li>
           <li>
+            
+            <MenuItem item="Experience" iName="fa-solid fa-briefcase" title="Work Experience"/>
+          </li>
+          <li>
             <MenuItem item="Projects" iName="fa-brands fa-dev" title="Projects"/>
           </li>
           <li>
@@ -61,7 +74,8 @@ export default function Nav() {
             <MenuItem item="Contact Me" iName="fa-regular fa-address-card" title="Contact me"/>
           </li>
         </ul>
-        <div className="socialMedia">
+        <div className="socialMedia h-10 md:h-fit md:absolute md:top-0 md:gap-8 md:right-0 border-l-0 md:flex md:flex-col md:items-center md:bg-[#65064d] py-5">
+          <div className="w-[1px] h-10 bg-white hidden md:block"></div>
           <i className="fa-brands fa-linkedin-in" onClick={()=>{
             open("https://linkedin.com/in/nitin-dabas-195058224")
           }}></i>

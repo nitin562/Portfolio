@@ -78,7 +78,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2.5rem;
+  
 }
 .socialMedia i {
   margin: 0 1rem;
@@ -156,8 +156,8 @@
   }
   .socialMedia {
     display: flex;
-    width: 20%;
-    border-left: 0.1rem solid #fff;
+  
+   
   }
   .menu ul {
     width: 80%;

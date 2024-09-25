@@ -9,8 +9,9 @@
   align-items: center;
 }
 .CodeSign {
-  /* border: 0.1rem solid #fff; */
 
+  /* border: 0.1rem solid #fff; */
+  
   font-size: 4rem;
   width: max-content;
   letter-spacing: 0.2rem;
