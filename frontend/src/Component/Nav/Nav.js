@@ -38,10 +38,10 @@ export default function Nav({showNavbar=false}) {
     };
   }, [Toogle]); 
   useEffect(()=>{
-    if(showNavbar==false){
+    if(showNavbar==false && Toogle){
       OnClickToogleBtn()
     }
-  },[showNavbar])
+  },[showNavbar,Toogle])
   return (
     <div className="navWrap transition-all duration-200 bg-[#0e1630] z-20" style={{
       top:showNavbar?"0":"-20rem"
