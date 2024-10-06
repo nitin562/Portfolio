@@ -1,4 +1,5 @@
-const base="http://localhost:8000"
+// const base="http://localhost:8000"
+const base="https://portfolio-backend-vf2r.onrender.com"
 export const links={
     sendMail:base+"/api/mail", //post
     subscribe:base+"/api/subscribe", //post
