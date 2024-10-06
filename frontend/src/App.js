@@ -23,11 +23,18 @@ function App() {
   }
   const pingTheServer = async () => {
     try {
+      if(sessionStorage.getItem("ping")==="true"){
+        return
+      }
       const url = links.ping;
       const response = await fetch(url);
       const result = await response.json();
       if (result.success === false) {
         alert("Server is slow down.");
+      }
+      else{
+        sessionStorage.setItem("ping","true")
+
       }
     } catch (error) {
       console.log(error)
