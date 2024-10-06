@@ -11,6 +11,7 @@ import Achieve from "./Achievements/Achieve";
 import Skills from "./SkillSec/Skills";
 import Contact from "./Contact/Contact";
 import Exp from "./Experience/Exp";
+
 export default function Home() {
   const context = useCont();
   const homeRef = useRef(0);
@@ -19,7 +20,7 @@ export default function Home() {
 
   const handleScroll = () => {
     setShowNavbar(false); // Hide the navbar while scrolling
-   
+
     // Clear the previous timeout if it exists
     if (timeoutId) clearTimeout(timeoutId);
 
@@ -28,13 +29,13 @@ export default function Home() {
       setShowNavbar(true);
     }, 500);
   };
-
+  
   useEffect(() => {
     homeRef.current.addEventListener("scroll", handleScroll);
-
+    
     // Cleanup event listener on component unmount
-  
   }, []);
+
   return (
     <div id="Home" ref={homeRef} className="scrollbar">
       <Nav showNavbar={showNavbar} />

@@ -1,17 +1,18 @@
 #Contact{
     width: 100%;
     min-height: 20rem;
-    background: url("https://www.wallpaperflare.com/static/358/183/789/autohotkey-programmers-code-programming-wallpaper.jpg") no-repeat center center/cover;
+    background: url("../../Images/contact.jpg") no-repeat center center/cover;
   
     border-top: 0.1rem solid var(--RedColor);
 }
 #Contact>p{
-    margin: 1rem 0;
-    color: #ff2478;
+    background-color: #1c7b7b62;
+    color: #04fefc;
     width: 100%;
     text-align: center;
     font-size: 3rem;
-    font-family: QuickSand;
+    font-family: "Ubuntu";
+    
     
 }
 .contacts{
@@ -22,7 +23,6 @@
 
 
 .left,.right{
-    height: 25rem;
     width: 100%;
 }
 .ContHead{

@@ -6,7 +6,7 @@ import { useCont } from "../../Context/ContextProvider";
 export default function Participate() {
   const cont = useCont();
   return (
-    <div id="part" className="scrollbar">
+    <div id="part" className="scrollbar beforeTemplate before:bg-[url('../public/graphics/achieve.avif')] before:opacity-35 before:!fixed">
       <TitleHeader title="PARTICIPATIONS" />
       <div className="catalog">
         {cont.state.Participate.data.map((e, i) => {
@@ -19,16 +19,17 @@ export default function Participate() {
                   <p className="Msg">{e.msg}</p>
                   {e.topic && (
                     <div className="view">
-                      <p>{e.topic}</p>
+                      <p className="bg-[#521515] p-2 rounded-xl">{e.topic}</p>
                     </div>
                   )}
                 </div>
               </div>
-              <Icon/>
             </div>
           );
         })}
       </div>
+      <Icon/>
+      
     </div>
   );
 }

@@ -15,7 +15,6 @@ export default function Skills() {
       <TitleHeader title="Know My Skills" />
       <SkillClassified icon={<i className="fa-solid fa-microchip mr-2 text-emerald-300"></i>} name={"Technical Skills"} skill={cont.state.Skills.personal} />
       <SkillClassified icon={<i className="fa-solid fa-star mr-2 text-emerald-300"></i>} name={"Function Specific Skills"} skill={cont.state.Skills.specific} />
-      <Mouse/>
     </div>
   );
 }

@@ -324,7 +324,7 @@ const ContextProvider = (props) => {
         address:<a href="https://www.linkedin.com/company/ss-techservices/">SS TECH SERVICES, Noida, Uttar Pradesh</a>,
         time:"3 June to 3 Sep",
         desc:"As a passionate and dedicated Full Stack Web Developer, I had the opportunity to enhance my skills during an enriching internship experience in SS TECH SERVICES, Noida, Uttar Pradesh. Over the course of 3 months, I worked on multiple projects that allowed me to leverage my expertise in both frontend and backend technologies.  I developed and enhanced various web applications, applying a wide range of technologies and best practices. I gained hands-on experience with HTML, CSS, Tailwind CSS, and JavaScript for creating responsive and dynamic interfaces. I built robust backend systems using Node JS, Express JS, and MongoDB, and worked with MySQL for database management. My expertise in React JS, Context API, and Redux allowed me to implement complex state management in applications. Additionally, I integrated REST APIs, payment gateways (PayPal & Stripe). I also gained experience with PHP, AWS for deployment, and Ant Design for UI components. This internship sharpened my debugging skills, familiarized me with the Software Development Life Cycle (SDLC), and enabled me to develop, deploy, and manage full-stack web applications, including E-commerce and CRM systems.",
-        projects:[{name:"CRM",alias:"CRM",tip:"A Well developed CRM For agents to handle leads, tasks, emails and messages."},{name:"Vander Engines",alias:"VanderEngines",desc:"An E-Commerce platform for engines and transmissions from CRUD Operation to Payment Gateway"},{name:"USA auto parts",alias:"USAAUTOPARTS",desc:"A Frontend Project for Selling Parts in USA Market"}]
+        projects:[{name:"CRM",alias:"CRM",tip:"A Well developed CRM For agents to handle leads, tasks, emails and messages."},{name:"Vander Engines",alias:"VanderEngines",tip:"An E-Commerce platform for engines and transmissions from CRUD Operation to Payment Gateway"},{name:"USA auto parts",alias:"USAAUTOPARTS",tip:"A Frontend Project for Selling Parts in USA Market"}]
       },
       
     ],
@@ -340,25 +340,52 @@ const ContextProvider = (props) => {
       ],
     },
     Cert: {
+      slider:{
+        count:4,
+        char:"C",
+        ext:"png",
+        base:"/certificates"
+      },
       data: [
         {
-          title: `Hacker Rank JavaScript(Basic) skill test Certificate`,
+          title: `SS TECH SERVICES`,
+          icon:<img className="w-6 h-6 rounded-full" src="/certificates/sstechLogo.jpeg"/>,
+
+          h1:"Full Stack Web Developer (3-Months)",
+          h2:"Gained rich quality of work experience with diverse technologies and tech Stack",
+       
+          img: "/certificates/C1.png",
+         
+        },
+        {
+          title: `HACKER RANK`,
+          icon:<img className="w-8 h-8 rounded-full" src="/certificates/HackerRank.avif"/>,
+          h1:"Basic JavaScript",
+          h2:"skill test Certificate",
           id: "9a72827633e0",
-          img: "https://gdm-catalog-fmapi-prod.imgix.net/ProductLogo/8b9fc1fa-bb42-45c6-957b-3b6611c542f1.png?ixlib=react-9.0.3&ch=Width%2CDPR&auto=format&w=4088",
+          img: "/certificates/C2.png",
           view: "View Complete Certificate at",
           linkId: "https://www.hackerrank.com/certificates/9a72827633e0",
         },
         {
-          title: `Hacker Rank JavaScript(Intermediate) skill test Certificate`,
+          title: `HACKER RANK`,
+          icon:<img className="w-8 h-8 rounded-full" src="/certificates/HackerRank.avif"/>,
+
+          h1:"Intermediate JavaScript",
+          h2:"skill test Certificate",
           id: "d26365c55b03",
-          img: "https://gdm-catalog-fmapi-prod.imgix.net/ProductLogo/8b9fc1fa-bb42-45c6-957b-3b6611c542f1.png?ixlib=react-9.0.3&ch=Width%2CDPR&auto=format&w=4088",
+          img: "/certificates/C4.png",
           view: "View Complete Certificate at",
           linkId: "https://www.hackerrank.com/certificates/d26365c55b03",
         },
         {
-          title: `Hacker Rank Problem solving(Basic) skill test Certificate`,
+          title: `HACKER RANK`,
+          icon:<img className="w-8 h-8 rounded-full" src="/certificates/HackerRank.avif"/>,
+
+          h1:"Problem Solving",
+          h2:"skill test Certificate",
           id: "df5d501d3880",
-          img: "https://gdm-catalog-fmapi-prod.imgix.net/ProductLogo/8b9fc1fa-bb42-45c6-957b-3b6611c542f1.png?ixlib=react-9.0.3&ch=Width%2CDPR&auto=format&w=4088",
+          img: "/certificates/C3.png",
           view: "View Complete Certificate at",
           linkId: "https://www.hackerrank.com/certificates/df5d501d3880",
         },

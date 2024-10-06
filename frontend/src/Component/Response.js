@@ -119,7 +119,7 @@ const Details = (name) => {
           <span>Graduation From:</span>PDMU, Bahadurgarh
         </p>
         <p>
-          <span>Current Session:</span>3rd year and 5th Semester
+          <span>Current Session:</span>4th year and 7th Semester
         </p>
         <p>
           <span>Current CGPA:</span>9.0

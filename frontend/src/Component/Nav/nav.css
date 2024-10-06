@@ -34,6 +34,7 @@
   display: flex;
   flex-direction: column;
   /* border: 0.1rem solid #fff; */
+  align-items: center;
   width: 60%;
   justify-content: space-around;
   background-color: #12214f;
@@ -45,11 +46,12 @@
   flex-direction: column;
   /* border: 0.1rem solid #fff; */
   justify-content: center;
+  align-items: center;
 }
 .menu ul li {
   color: #b19f9f;
   text-align: center;
-  font-family: "AR One Sans", Arial, Helvetica, sans-serif;
+  font-family: "Quicksand", Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
   margin: 1rem auto;
   transition: 0.3s;
@@ -160,7 +162,7 @@
    
   }
   .menu ul {
-    width: 80%;
+    width: 90%;
   }
   .menu ul li i {
     display: none;

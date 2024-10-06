@@ -3,7 +3,7 @@ import "./intro.css"
 
 export default function Intro() {
   return (
-    <div id="Intro">
+    <div id="Intro" >
         <div className="head">
             <span className='flex items-center gap-4'>--Hello!
               <img src="/wave.gif" className='rounded-full w-10 h-10'/>

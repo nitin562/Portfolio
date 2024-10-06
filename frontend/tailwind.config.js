@@ -4,7 +4,11 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-   
+   extend:{
+    backgroundImage:{
+      // skillcard:"url('/graphics/skillcard.jpg')"
+    }
+   }
   },
   plugins: [],
 }

@@ -17,7 +17,7 @@ export default function ProPage() {
   let name=state?.name||sessionStorage.getItem("name")
   const skills = cont.state.Skills;
   const [imgArr, setimgArr] = useState([]);
-  console.log(name)
+
   let { url, Notes, code, video, deploy, slider,embed } =
     cont.state.projectData[name]?cont.state.projectData[name]:cont.state.InternshipProjects[name]
   const settings = {
@@ -93,11 +93,11 @@ export default function ProPage() {
   }, [imgArr,slider,url])
 
   return (
-    <div id="ProPage" className="scrollbar">
+    <div id="ProPage" className="scrollbar beforeTemplate before:bg-[url('../public/graphics/project.avif')] before:blur-md before:opacity-80 before:!fixed ">
       <TitleHeader title={name} />
       <p className="text-3xl  bg-gradient-to-r from-[#caff0a] via-[#11dfff] to-[#4c00ff] bg-clip-text text-transparent md:text-5xl p-2 text-center my-5 font-[poppins]">Take a look of it here</p>
-      <div className="w-full px-12 mb-8">
-        {slider&&<Slider {...settings} autoplay={true} initialSlide={true}>
+      <div className="w-full md:w-3/4 m-auto px-12 mb-8">
+        {slider&&<Slider {...settings} lazyLoad="progressive" autoplay={true} initialSlide={true}>
           {imgArr}
         </Slider>}
         
@@ -127,7 +127,7 @@ export default function ProPage() {
           return (
             <div
               key={idx}
-              className="flex flex-col border-[1px] rounded-2xl p-4  text-white justify-center items-center gap-2"
+              className="flex flex-col border-[1px] rounded-2xl p-4  text-white justify-center items-center gap-2 backdrop-blur-md"
             >
               <div className="text-5xl text-[#16ffc1]">{e.icon}</div>
               <p className="text-center">{e.name}</p>

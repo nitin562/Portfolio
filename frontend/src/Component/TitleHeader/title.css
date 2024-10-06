@@ -1,6 +1,6 @@
 .title {
   width: 100%;
-  background-color: var(--RedColor);
+  background-color: #980651c4;
   height: 3rem;
   font-size: 1.8rem;
   display: flex;
@@ -17,4 +17,5 @@
 
 .title span::first-letter {
   color: var(--GreenColor);
+  font-size: 2rem;
 }

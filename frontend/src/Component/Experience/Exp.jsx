@@ -7,9 +7,9 @@ export default function Exp() {
   const experience = cont.state.experience;
   const ref=cont.state.references.Experience
   return (
-    <div className="w-full" ref={ref}>
+    <div className="w-full beforeTemplate before:bg-[url('../public/graphics/exp.avif')] before:opacity-50 before:blur-md" ref={ref}>
       <TitleHeader title={"Experience"} />
-      <div className="w-full p-2 mb-4">
+      <div className="w-full p-2 mb-2">
         <div className="w-full flex flex-col  lg:w-3/4 m-auto ">
           {experience &&
             experience.map((exp, idx) => {
@@ -27,7 +27,7 @@ export default function Exp() {
                   <div className="flex flex-col min-h-10 *:text-wrap ">
                     <div className="text-white flex flex-wrap gap-2 items-center mb-2 font-[Poppins] font-semibold text-2xl md:text-3xl">
                       {exp.heading}
-                      <TextTile name={exp.type} className="text-sm cursor-default" />
+                      <TextTile name={exp.type} alias="Certificates" desc="View Certificate" className="text-sm cursor-default" />
                     </div>
                     <p className="text-xl md:text-2xl text-[#e3e7ed] font-[Ubuntu] hover:text-[#eea6f9] transition-all duration-200">
                       {exp.address}
@@ -45,7 +45,7 @@ export default function Exp() {
                         <div className="flex-1 h-[1px] bg-[#74faff]"></div>
                       </div>
                       {exp.projects.map((e,id)=>{
-                        return <TextTile key={id} name= {e.name} alias={e.alias}desc={e.desc} />
+                        return <TextTile key={id} name= {e.name} alias={e.alias} desc={e.tip} />
                       })}
                     </div>
                   </div>

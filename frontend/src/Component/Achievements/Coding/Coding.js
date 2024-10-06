@@ -11,7 +11,7 @@ export default function Coding() {
     return data.toDateString()
   }
   return (
-    <div id="Coding" className="scrollbar">
+    <div id="Coding" className="scrollbar beforeTemplate before:bg-[url('../public/graphics/achieve.avif')] before:opacity-35 before:!fixed">
       <TitleHeader title="CODING" />
       {cont.state.Coding.data.map((e, i) => {
         return (
@@ -22,7 +22,7 @@ export default function Coding() {
               <p>{e.view}</p>
               <a href={e.link} target="_blank">here</a>
             </div>}
-            <div className="date"><i className="fa-regular fa-clock"></i><p>{getDate(e.date)}</p></div>
+            <div className="date items-center"><i className="fa-regular fa-clock"></i><p>{getDate(e.date)}</p></div>
           </div>
         );
       })}

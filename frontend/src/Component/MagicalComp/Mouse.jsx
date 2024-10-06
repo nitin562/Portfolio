@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Mouse() {
   return (
-    <div className='flex flex-col justify-center items-center gap-2 *:drop-shadow-[0_0_0.8rem_#fff] overflow-hidden'>
+    <div className='flex flex-col justify-center items-center relative top-[-3.5rem] gap-2 drop-shadow-[0_0_10px_#fff] overflow-hidden'>
         
         <div className='flex flex-col gap-1 '>
         <div className='w-1 rounded-full h-2 bg-emerald-500'></div>

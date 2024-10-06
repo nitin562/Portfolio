@@ -1,15 +1,41 @@
 #Home {
   width: 100%;
   height: 100%;
+ 
   
 }
+
 .IntroLine {
   
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 1;
+  background-color: #07132d;
+  animation: slideDown 2s ease 0.3s forwards;
+}
+.IntroLine::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  background: url('../../public/graphics/into.avif') no-repeat center center/cover;
+  z-index: -1;
+  opacity: 0.3;
 
+}
+@keyframes slideDown {
+  0%{
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 :root {
   --GreenColor: #38ff95;

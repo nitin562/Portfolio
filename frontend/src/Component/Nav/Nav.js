@@ -43,7 +43,7 @@ export default function Nav({showNavbar=false}) {
     }
   },[showNavbar,Toogle])
   return (
-    <div className="navWrap transition-all duration-200 bg-[#0e1630] z-20" style={{
+    <div className="navWrap transition-all duration-200 bg-[#0e1630] beforeTemplate before:bg-[url('../public/graphics/nav.avif')] before:blur-md !z-20 before:opacity-40" style={{
       top:showNavbar?"0":"-20rem"
     }}>
       <p className="name">
@@ -71,7 +71,7 @@ export default function Nav({showNavbar=false}) {
             <MenuItem item="Achievements" iName="fa-solid fa-star" title="Achievements" />
           </li>
           <li>
-            <MenuItem item="Contact Me" iName="fa-regular fa-address-card" title="Contact me"/>
+            <MenuItem className={'border-[1px] border-transparent  font-[Abel] tracking-widest  font-bold bg-[#1563ff7d] rounded-3xl px-3 p-1 hover:bg-transparent hover:border-[#1cff3a] transition-all duration-[0.3s]'} item="Contact Me" iName="fa-regular fa-address-card" title="Contact me"/>
           </li>
         </ul>
         <div className="socialMedia h-10 md:h-fit md:absolute md:top-0 md:gap-8 md:right-0 border-l-0 md:flex md:flex-col md:items-center md:bg-[#65064d] py-5">

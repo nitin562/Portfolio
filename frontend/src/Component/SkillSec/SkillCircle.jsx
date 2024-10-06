@@ -19,7 +19,7 @@ export default function SkillCircle({pos,skillsInView,level}) {
         }
     },[skillsInView])
   return (
-    <div className="md:w-5 md:h-5 w-2 h-2 overflow-hidden rounded-full border-[1px] border-slate-500">
+    <div className="md:w-5 md:h-5 w-2 h-2 overflow-hidden rounded-full ">
         <div className='w-0 h-full  drop-shadow-[0_0_0.1rem_#21ff899c] bg-[#21ff899c] transition-all duration-200' style={{width:fill}}></div>
     </div>
   )

@@ -9,10 +9,13 @@
     margin: 1rem 0;
     width: 100%;
     border: 0.1rem solid #fff;
+    border-radius: 10px;
 }
 
 .PartData .view p{
-    color: #0effbf;
+    color: #ffb2fe;
+    font-family: "Poppins";
+    font-style: normal;
 }
 /* Desktop */
 @media screen and (min-width:900px) {
