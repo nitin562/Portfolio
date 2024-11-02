@@ -12,9 +12,13 @@
 
 .head {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   /* border: 0.1rem solid greenyellow; */
-  align-items: flex-end;
+  width:80%;
+  padding: 0.5rem;
+
+  /* align-items: flex-end; */
   flex-wrap: wrap;
 }
 .head span {

@@ -50,7 +50,7 @@ export default function Nav({showNavbar=false}) {
         <span>N</span>itin <span>D</span>abas
       </p>
 
-      <div className="menu" ref={menu}>
+      <div className="menu beforeTemplate before:bg-[url('../public/graphics/project.avif')] before:blur-sm !z-20 before:opacity-40" ref={menu}>
         <ul>
           <li>
             
@@ -71,7 +71,7 @@ export default function Nav({showNavbar=false}) {
             <MenuItem item="Achievements" iName="fa-solid fa-star" title="Achievements" />
           </li>
           <li>
-            <MenuItem className={'border-[1px] border-transparent  font-[Abel] tracking-widest  font-bold bg-[#1563ff7d] rounded-3xl px-3 p-1 hover:bg-transparent hover:border-[#1cff3a] transition-all duration-[0.3s]'} item="Contact Me" iName="fa-regular fa-address-card" title="Contact me"/>
+            <MenuItem className={'border-[1px] border-transparent shadow-[0_0_20px_#1ec8c5]   font-[Abel] tracking-widest  font-bold bg-[#0055ff] rounded-3xl px-3 p-1 hover:bg-transparent hover:border-[#1cff3a] transition-all duration-[0.3s]'} item="Contact Me" iName="fa-regular fa-address-card" title="Contact me"/>
           </li>
         </ul>
         <div className="socialMedia h-10 md:h-fit md:absolute md:top-0 md:gap-8 md:right-0 border-l-0 md:flex md:flex-col md:items-center md:bg-[#65064d] py-5">
