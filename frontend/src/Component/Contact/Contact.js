@@ -118,7 +118,7 @@ export default function Contact() {
               onClick={send}
               className="float-right text-white bg-[#04b3fe97] border-[1px] border-transparent p-2 rounded-lg px-4 text-lg font-[Quicksand] hover:border-[#04fefc] transition-all duration-300 hover:text-[#04fefc] flex items-center gap-2 hover:bg-transparent"
             >
-              {!loader?<i class="fa-solid fa-paper-plane"></i>:<span className="loader"></span>}{!loader?"Send":"Sending"}
+              {!loader?<i className="fa-solid fa-paper-plane"></i>:<span className="loader"></span>}{!loader?"Send":"Sending"}
             </button>
            
           </div>
