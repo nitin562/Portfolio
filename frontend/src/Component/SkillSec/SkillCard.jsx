@@ -13,7 +13,7 @@ export default function SkillCard({ skill, icon, desc }) {
         <div className="w-[65%] bg-pink-800 h-[1px]"></div>
       </div>
       {desc && (
-        <p className="h-[3rem] p-2 text-[#000000] bg-[#f7e46a] flex justify-center items-center rounded-lg w-full  text-[1rem] text-center font-[Ubuntu] font-semibold">
+        <p className="min-h-[4rem] p-2 text-[#000000] bg-[#f7e46a] flex justify-center items-center rounded-lg w-full  text-[1rem] text-center font-[Ubuntu] font-semibold">
           {desc}
         </p>
       )}

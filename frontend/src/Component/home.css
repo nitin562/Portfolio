@@ -1,12 +1,9 @@
 #Home {
   width: 100%;
   height: 100%;
- 
-  
 }
 
 .IntroLine {
-  
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
@@ -16,23 +13,23 @@
   background-color: #07132d;
   animation: slideDown 2s ease 0.3s forwards;
 }
-.IntroLine::before{
+.IntroLine::before {
   content: "";
   width: 100%;
   height: 100%;
   position: absolute;
   inset: 0;
-  background: url('../../public/graphics/into.avif') no-repeat center center/cover;
+  background: url("../../public/graphics/into.avif") no-repeat center
+    center/cover;
   z-index: -1;
   opacity: 0.3;
-
 }
 @keyframes slideDown {
-  0%{
+  0% {
     opacity: 0;
     transform: translateY(-50%);
   }
-  100%{
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
@@ -42,18 +39,18 @@
   --RedColor: #ff1372;
 }
 /* Scrollbar design */
-.scrollbar{
+.scrollbar {
   overflow: hidden scroll;
 }
-.scrollbar::-webkit-scrollbar{
+.scrollbar::-webkit-scrollbar {
   width: 0.3rem;
 }
-.scrollbar::-webkit-scrollbar-track{
+.scrollbar::-webkit-scrollbar-track {
   width: 0.1rem;
   background-color: rgb(4, 48, 48);
   border-radius: 3rem;
 }
-.scrollbar::-webkit-scrollbar-thumb{
+.scrollbar::-webkit-scrollbar-thumb {
   width: 0.1rem;
   background-color: #6b716e;
   border-radius: 2.5rem;
@@ -63,4 +60,14 @@
   .IntroLine {
     flex-direction: row-reverse;
   }
+}
+.absoluteStyle {
+  background: rgb(208, 62, 18);
+  background: linear-gradient(
+    90deg,
+    rgba(208, 62, 18, 1) 0%,
+    rgba(205, 81, 14, 1) 35%,
+    rgba(182, 67, 5, 1) 59%,
+    rgba(255, 0, 91, 1) 100%
+  );
 }

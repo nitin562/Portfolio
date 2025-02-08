@@ -11,6 +11,7 @@ import Achieve from "./Achievements/Achieve";
 import Skills from "./SkillSec/Skills";
 import Contact from "./Contact/Contact";
 import Exp from "./Experience/Exp";
+import AbsoluteIcons from "./AbsoluteIcons";
 
 export default function Home() {
   const context = useCont();
@@ -37,7 +38,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div id="Home" ref={homeRef} className="scrollbar">
+    <div id="Home" ref={homeRef} className="scrollbar relative">
       <Nav showNavbar={showNavbar} />
       <div className="IntroLine" ref={context.state.references["Home"]}>
         <Frame />
@@ -50,6 +51,7 @@ export default function Home() {
       <Projects />
       <Achieve />
       <Contact />
+      <AbsoluteIcons/>
     </div>
   );
 }

@@ -85,6 +85,7 @@ export default function Nav({showNavbar=false}) {
           <i className="fa-solid fa-c" onClick={()=>{
             open("https://leetcode.com/nitindbas8800/")
           }}></i>
+          
         </div>
       </div>
 
