@@ -46,31 +46,76 @@ const ContextProvider = (props) => {
           name: "React JS",
           icon: <i className="fa-brands fa-react "></i>,
           level: 95,
-          project: ["#SnakeGame","#VanderEngines","#USAAUTOPARTS", "*"],
+          project: ["#SnakeGame", "#VanderEngines", "#USAAUTOPARTS", "*"],
         },
         {
           name: "Node JS",
           icon: <i className="fa-brands fa-node-js "></i>,
           level: 90,
-          project: ["#SnakeGame","#VanderEngines","#USAAUTOPARTS", "#NewsMonkey", "*"],
+          project: [
+            "#SnakeGame",
+            "#VanderEngines",
+            "#USAAUTOPARTS",
+            "#NewsMonkey",
+            "#ChatApp",
+            "*",
+          ],
         },
         {
           name: "Express JS",
           icon: <i className="fa-brands fa-node-js "></i>, // Same Node.js icon
           level: 90,
-          project: ["#SnakeGame","#VanderEngines","#USAAUTOPARTS", "#NewsMonkey", "*"],
+          project: [
+            "#SnakeGame",
+            "#VanderEngines",
+            "#USAAUTOPARTS",
+            "#NewsMonkey",
+            "#ChatApp",
+            "*",
+          ],
         },
         {
           name: "MongoDB",
           icon: <i className="fa-solid fa-database "></i>,
           level: 90,
-          project: ["#SnakeGame","#VanderEngines","#USAAUTOPARTS", "#NewsMonkey", "*"],
+          project: [
+            "#SnakeGame",
+            "#VanderEngines",
+            "#USAAUTOPARTS",
+            "#NewsMonkey",
+            "#ChatApp",
+            "*",
+          ],
+        },
+        {
+          name: "Python",
+          icon: <i class="fa-brands fa-python"></i>,
+          level: 80,
+          project: ["ChatApp"],
+        },
+        {
+          name: "Django",
+          icon: <i class="fa-brands fa-dev"></i>,
+          level: 80,
+          project: ["ChatApp"],
+        },
+        {
+          name: "Django-Channels",
+          icon: <i class="fa-solid fa-group-arrows-rotate"></i>,
+          level: 80,
+          project: ["ChatApp"],
+        },
+        {
+          name: "Django ORM",
+          icon: <i class="fa-solid fa-file-waveform"></i>,
+          level: 80,
+          project: ["ChatApp"],
         },
         {
           name: "MySQL",
           icon: <i className="fa-solid fa-database "></i>, // Same icon as MongoDB
           level: 90,
-          project: ["VanderEngines"],
+          project: ["VanderEngines", "ChatApp"],
         },
         {
           name: "Git",
@@ -88,7 +133,7 @@ const ContextProvider = (props) => {
           name: "Redux",
           icon: <i className="fa-solid fa-globe "></i>, // Using generic globe icon for Redux
           level: 90,
-          project: ["DigitalDocs"],
+          project: ["DigitalDocs", "ChatApp"],
         },
         {
           name: "REST API",
@@ -179,6 +224,36 @@ const ContextProvider = (props) => {
       ],
     },
     projectData: {
+      ChatApp: {
+        url: require("../Projects/ProjctImg/chatapp.jpg"),
+        skills: [
+          "React JS",
+          "Python",
+          "Django",
+          "Tailwind CSS",
+          "MySQL",
+          "Django-Channels",
+          "Django-ORM",
+        ],
+        Notes: [
+          "Designed and developed a full-stack real-time chat application using Python and Django - Currently in development Phase",
+          "Integrated Django Channels and WebSockets to enable bi-directional communication between users for a seamless live chat experience",
+          "Built a robust authentication system with user registration, login, logout, and session handling",
+          "Implemented individual (one-on-one) chats and scalable group chat functionality with dynamic room creation",
+          "Utilized Sqlite as the primary relational database for storing user data and message history",
+          "Developed an intuitive and responsive frontend using ReactJS, Tailwind CSS, JavaScript, and WebSocket API for real-time message updates without refreshing the page",
+          "Added visual indicators for message delivery status, new messages, and active users",
+          "Enabled file sharing features such as image uploads and document sharing directly within the chat interface",
+          "Applied user access control and permission handling for chat rooms and admin-only features",
+          "Followed best practices for code structure, modularity, and reusable components to ensure maintainability",
+          "Ensured high performance through asynchronous handling and optimized database queries",
+          "Made the app mobile-friendly and responsive to work well across devices",
+          "Focused on delivering a secure, fast, and user-centric communication platform suitable for teams, communities, or customer support systems",
+        ],
+        code: "https://github.com/nitin562/-chatapp",
+        video: null,
+        deploy: null,
+      },
       DigitalDoc: {
         url: require("../Projects/ProjctImg/DigitalDoc.PNG"),
         slider: {
@@ -308,25 +383,45 @@ const ContextProvider = (props) => {
         skills: ["REACT JS", "CSS", "JS", "API"],
         Notes: [
           "A Frontend Project for Selling Parts in USA Market",
-          ,"As a Frontend Developer for the USA Auto Parts website, I was responsible for designing and developing the user interface using HTML, CSS, and JavaScript, ensuring a smooth and responsive experience for users. I worked closely with the backend team to integrate lead capture functionality, allowing real-time lead generation through a seamless connection with the PHP backend. My role also involved optimizing the website for cross-device compatibility, ensuring it was fully responsive and accessible across various browsers and devices. Additionally, I focused on enhancing the UI/UX, improving navigation and creating an intuitive, user-friendly interface to boost overall engagement and usability."
+          ,
+          "As a Frontend Developer for the USA Auto Parts website, I was responsible for designing and developing the user interface using HTML, CSS, and JavaScript, ensuring a smooth and responsive experience for users. I worked closely with the backend team to integrate lead capture functionality, allowing real-time lead generation through a seamless connection with the PHP backend. My role also involved optimizing the website for cross-device compatibility, ensuring it was fully responsive and accessible across various browsers and devices. Additionally, I focused on enhancing the UI/UX, improving navigation and creating an intuitive, user-friendly interface to boost overall engagement and usability.",
         ],
         code: null,
         video: null,
         deploy: "https://usaauto-parts.com",
-        embed:"https://usaauto-parts.com/transmissions/acura-transmission.php"
+        embed: "https://usaauto-parts.com/transmissions/acura-transmission.php",
       },
     },
-    experience:[
+    experience: [
       {
-        year:2024,
-        heading:"Full Stack Web Developer",
-        type:"Internship",
-        address:<a href="https://www.linkedin.com/company/ss-techservices/">SS TECH SERVICES, Noida, Uttar Pradesh</a>,
-        time:"3 June to 3 Sep",
-        desc:"As a passionate and dedicated Full Stack Web Developer, I had the opportunity to enhance my skills during an enriching internship experience in SS TECH SERVICES, Noida, Uttar Pradesh. Over the course of 3 months, I worked on multiple projects that allowed me to leverage my expertise in both frontend and backend technologies.  I developed and enhanced various web applications, applying a wide range of technologies and best practices. I gained hands-on experience with HTML, CSS, Tailwind CSS, and JavaScript for creating responsive and dynamic interfaces. I built robust backend systems using Node JS, Express JS, and MongoDB, and worked with MySQL for database management. My expertise in React JS, Context API, and Redux allowed me to implement complex state management in applications. Additionally, I integrated REST APIs, payment gateways (PayPal & Stripe). I also gained experience with PHP, AWS for deployment, and Ant Design for UI components. This internship sharpened my debugging skills, familiarized me with the Software Development Life Cycle (SDLC), and enabled me to develop, deploy, and manage full-stack web applications, including E-commerce and CRM systems.",
-        projects:[{name:"CRM",alias:"CRM",tip:"A Well developed CRM For agents to handle leads, tasks, emails and messages."},{name:"Vander Engines",alias:"VanderEngines",tip:"An E-Commerce platform for engines and transmissions from CRUD Operation to Payment Gateway"},{name:"USA auto parts",alias:"USAAUTOPARTS",tip:"A Frontend Project for Selling Parts in USA Market"}]
+        year: 2024,
+        heading: "Full Stack Web Developer",
+        type: "Internship",
+        address: (
+          <a href="https://www.linkedin.com/company/ss-techservices/">
+            SS TECH SERVICES, Noida, Uttar Pradesh
+          </a>
+        ),
+        time: "3 June to 3 Sep",
+        desc: "As a passionate and dedicated Full Stack Web Developer, I had the opportunity to enhance my skills during an enriching internship experience in SS TECH SERVICES, Noida, Uttar Pradesh. Over the course of 3 months, I worked on multiple projects that allowed me to leverage my expertise in both frontend and backend technologies.  I developed and enhanced various web applications, applying a wide range of technologies and best practices. I gained hands-on experience with HTML, CSS, Tailwind CSS, and JavaScript for creating responsive and dynamic interfaces. I built robust backend systems using Node JS, Express JS, and MongoDB, and worked with MySQL for database management. My expertise in React JS, Context API, and Redux allowed me to implement complex state management in applications. Additionally, I integrated REST APIs, payment gateways (PayPal & Stripe). I also gained experience with PHP, AWS for deployment, and Ant Design for UI components. This internship sharpened my debugging skills, familiarized me with the Software Development Life Cycle (SDLC), and enabled me to develop, deploy, and manage full-stack web applications, including E-commerce and CRM systems.",
+        projects: [
+          {
+            name: "CRM",
+            alias: "CRM",
+            tip: "A Well developed CRM For agents to handle leads, tasks, emails and messages.",
+          },
+          {
+            name: "Vander Engines",
+            alias: "VanderEngines",
+            tip: "An E-Commerce platform for engines and transmissions from CRUD Operation to Payment Gateway",
+          },
+          {
+            name: "USA auto parts",
+            alias: "USAAUTOPARTS",
+            tip: "A Frontend Project for Selling Parts in USA Market",
+          },
+        ],
       },
-      
     ],
     Coding: {
       data: [
@@ -340,28 +435,37 @@ const ContextProvider = (props) => {
       ],
     },
     Cert: {
-      slider:{
-        count:4,
-        char:"C",
-        ext:"png",
-        base:"/certificates"
+      slider: {
+        count: 4,
+        char: "C",
+        ext: "png",
+        base: "/certificates",
       },
       data: [
         {
           title: `SS TECH SERVICES`,
-          icon:<img className="w-6 h-6 rounded-full" src="/certificates/sstechLogo.jpeg"/>,
+          icon: (
+            <img
+              className="w-6 h-6 rounded-full"
+              src="/certificates/sstechLogo.jpeg"
+            />
+          ),
 
-          h1:"Full Stack Web Developer (3-Months)",
-          h2:"Gained rich quality of work experience with diverse technologies and tech Stack",
-       
+          h1: "Full Stack Web Developer (3-Months)",
+          h2: "Gained rich quality of work experience with diverse technologies and tech Stack",
+
           img: "/certificates/C1.png",
-         
         },
         {
           title: `HACKER RANK`,
-          icon:<img className="w-8 h-8 rounded-full" src="/certificates/HackerRank.avif"/>,
-          h1:"Basic JavaScript",
-          h2:"skill test Certificate",
+          icon: (
+            <img
+              className="w-8 h-8 rounded-full"
+              src="/certificates/HackerRank.avif"
+            />
+          ),
+          h1: "Basic JavaScript",
+          h2: "skill test Certificate",
           id: "9a72827633e0",
           img: "/certificates/C2.png",
           view: "View Complete Certificate at",
@@ -369,10 +473,15 @@ const ContextProvider = (props) => {
         },
         {
           title: `HACKER RANK`,
-          icon:<img className="w-8 h-8 rounded-full" src="/certificates/HackerRank.avif"/>,
+          icon: (
+            <img
+              className="w-8 h-8 rounded-full"
+              src="/certificates/HackerRank.avif"
+            />
+          ),
 
-          h1:"Intermediate JavaScript",
-          h2:"skill test Certificate",
+          h1: "Intermediate JavaScript",
+          h2: "skill test Certificate",
           id: "d26365c55b03",
           img: "/certificates/C4.png",
           view: "View Complete Certificate at",
@@ -380,10 +489,15 @@ const ContextProvider = (props) => {
         },
         {
           title: `HACKER RANK`,
-          icon:<img className="w-8 h-8 rounded-full" src="/certificates/HackerRank.avif"/>,
+          icon: (
+            <img
+              className="w-8 h-8 rounded-full"
+              src="/certificates/HackerRank.avif"
+            />
+          ),
 
-          h1:"Problem Solving",
-          h2:"skill test Certificate",
+          h1: "Problem Solving",
+          h2: "skill test Certificate",
           id: "df5d501d3880",
           img: "/certificates/C3.png",
           view: "View Complete Certificate at",
