@@ -20,7 +20,7 @@ const subscriptionSaveToDb = asyncHandler(async (req, res) => {
 const pingOnOpen = asyncHandler(async (req, res) => {
   const subscribers = await subscribe.find({});
 
-  const time = new Date()
+  const time = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
   
   const payload = {
     title: "New User opened your Portfolio",
