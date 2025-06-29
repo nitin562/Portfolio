@@ -19,9 +19,12 @@ const subscriptionSaveToDb = asyncHandler(async (req, res) => {
 });
 const pingOnOpen = asyncHandler(async (req, res) => {
   const subscribers = await subscribe.find({});
+
+  const time = new Date()
+  
   const payload = {
     title: "New User opened your Portfolio",
-    body: `A user is viewing your portfolio`,
+    body: `A user is viewing your portfolio at ${time.toLocaleString()}`,
     email:false
   };
   subscribers.forEach((obj) => {
